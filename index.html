@@ -84,22 +84,81 @@
 
 <body>
 
+    <!--mobile menu  -->
+    <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8 ms-auto">
+                <button class="navbar-close cursor-pointer">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div>
+                <ul>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-cBlack hover:bg-cYellow rounded" href="#">Home</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-cBlack hover:bg-cYellow rounded" href="#">About Us</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-cBlack hover:bg-cYellow rounded" href="#">Services</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-cBlack hover:bg-cYellow rounded" href="#">Pricing</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="block p-4 text-sm font-semibold text-cBlack hover:bg-cYellow rounded" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-12">
+                <div class="pt-6">
+                    <a href="#" class="inline-flex items-center h-12 bg-cYellow px-4 gap-2 py-3 rounded-[100px] cursor-pointer text-base leading-none font-[500] text-cBlack ms-auto">
+                        Book a call
+                        <span class="w-[10px] h-[10px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#171717" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="w-full">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>                                           
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
     <!--======== Header Area Start =========-->
-    <header class="header bg-[#FFFCF9]">
+    <header class="header bg-[#FFFCF9] fixed inset-0 z-10 h-[72px] flex items-center">
         <div class="container flex items-center justify-between py-3">
             <div class="flex items-center gap-2">
                 <img src="assets/img/logo.svg" alt="">
                 <span class="font-bold text-xl text-cBlack">TheScalePoint</span>
             </div>
-            <a href="#" class="book_btn inline-flex items-center h-12 bg-cYellow px-4 gap-2 py-3 rounded-[100px] cursor-pointer text-base leading-none font-[500] text-cBlack">
-                Book a call
-                <span class="w-[10px] h-[10px] ">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#171717" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="w-full">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>                                           
+            <div class="flex items-center">
+                <ul class="hidden md:flex items-center gap-7 pr-4">
+                    <li class="inline-flex"><a href="#" class=" font-medium text-base text-cBlack"> Home </a></li>
+                    <li class="inline-flex"><a href="#" class=" font-medium text-base text-cBlack"> Contact </a></li>
+                    <li class="inline-flex"><a href="#" class=" font-medium text-base text-cBlack"> Address </a></li>
+                </ul>
+                <a href="#" class="book_btn hidden md:inline-flex items-center h-12 bg-cYellow px-4 gap-2 py-3 rounded-[100px] cursor-pointer text-base leading-none font-[500] text-cBlack">
+                    Book a call
+                    <span class="w-[10px] h-[10px] ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#171717" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="w-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>                                           
+                    </span>
+                </a>
+
+                <span class="inline-block md:hidden navbar-burger cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
                 </span>
-            </a>
+            </div>
         </div>
+
     </header>
     <!--======== Header Area End =========-->
 
@@ -108,8 +167,8 @@
     <main class="main overflow-hidden">
 
         <!--======== Hero Area Start =========-->
-        <section class="hero-area py-16 bg-[url('assets/img/hero_bg.png')] bg-cover bg-no-repeat bg-[#FFFCF9]">
-            <div class="container flex justify-between items-center flex-wrap">
+        <section class="hero-area mt-[72px] py-16 bg-[url('assets/img/hero_bg.png')] bg-cover bg-no-repeat bg-[#FFFCF9]">
+            <div class="container flex justify-between items-center flex-wrap " data-aos="fade-in" data-aos-duration="1500">
                 <!-- hero left content   -->
                 <div class="md:w-1/2 w-full flex flex-col gap-6">
                     <span class="text-cPurple font-semibold text-xs not-italic">Our mission is simple</span>
@@ -186,8 +245,8 @@
 
         <!--======== Our team Area Start =========-->
         <section class="md:py-[120px] py-12 bg-white">
-            <div class="container flex md:justify-between justify-center mb-12 flex-wrap">
-                <h2>Our team becomes your team</h2>
+            <div class="container flex md:justify-between justify-center mb-12 flex-wrap items-start"  data-aos="fade-up" data-aos-duration="1200">
+                <h2 class="font-medium text-5xl text-cBlack lg:max-w-[500px] md:max-w-full w-full pr-[20px] lg:mb-0 mb-4 md:text-left text-center">Our team becomes your team</h2>
                 <div class="flex items-center md:mt-0 mt-5">
                     <a href="#" class="inline-flex items-center bg-cBlack px-3 gap-2 py-2 rounded-[100px] cursor-pointer text-sm leading-none font-medium text-white">
                         <span class="w-6">
@@ -207,7 +266,7 @@
                     </a>
                 </div>
             </div>
-            <div class="container flex gap-6 md:flex-nowrap flex-wrap">
+            <div class="container flex gap-6 md:flex-nowrap flex-wrap "  data-aos="fade-up" data-aos-duration="1500">
                 <!-- left team part  -->
                 <div class="flex flex-col gap-6 max-w-[720px]">
                     <div class="flex flex-col gap-[54px] p-8 bg-cTeal rounded-[20px]">
@@ -256,7 +315,7 @@
                 <!-- domain card section part  -->
                 <div class="flex md:flex-nowrap flex-wrap my-12">
                     <!--Domain single card  -->
-                    <div class="flex flex-col gap-6 p-8">
+                    <div class="flex flex-col gap-6 p-8" data-aos="fade-in" data-aos-duration="1000">
                         <img src="assets/img/frontend.png" alt="">
                         <div class="flex flex-col gap-4">
                             <h2 class="text-2xl text-cBlack font-semibold not-italic">Front-end developers</h2>
@@ -266,7 +325,7 @@
                         </div>
                     </div>
                     <!--Domain single card  -->
-                    <div class="flex flex-col gap-6 p-8">
+                    <div class="flex flex-col gap-6 p-8" data-aos="fade-in" data-aos-duration="1400">
                         <img src="assets/img/backend.png" alt="">
                         <div class="flex flex-col gap-4">
                             <h2 class="text-2xl text-cBlack font-semibold not-italic">Back-end developers</h2>
@@ -276,7 +335,7 @@
                         </div>
                     </div>
                     <!--Domain single card  -->
-                    <div class="flex flex-col gap-6 p-8">
+                    <div class="flex flex-col gap-6 p-8" data-aos="fade-in" data-aos-duration="1200">
                         <img src="assets/img/how-it-works-talk.png" alt="">
                         <div class="flex flex-col gap-4">
                             <h2 class="text-2xl text-cBlack font-semibold not-italic">AI/ML engineers</h2>
@@ -312,7 +371,7 @@
 
         <!--======== team in Europe Area Start =========-->
         <section class="md:py-[120px] py-12 bg-white">
-            <div class="container flex justify-between items-center gap-12 md:flex-nowrap flex-wrap">
+            <div class="container flex justify-between items-center gap-12 md:flex-nowrap flex-wrap" data-aos="fade-right" data-aos-duration="1200">
                 <!-- team left part  -->
                 <div class="flex flex-col gap-6 max-w-[600px]">
                     <h1 class="font-medium not-italic text-cBlack text-5xl">
@@ -351,7 +410,7 @@
                 </div>
 
                 <!-- team right part  -->
-                <div class=" bg-[url('assets/img/team_bg.png')] bg-cover bg-no-repeat border border-[#F5F5F5] md:max-w-[520px] w-full rounded-[20px]">
+                <div class=" bg-[url('assets/img/team_bg.png')] bg-cover bg-no-repeat border border-[#F5F5F5] md:max-w-[520px] w-full rounded-[20px]" data-aos="fade-left" data-aos-duration="1400">
                     <div class="p-4 flex flex-col items-center justify-center gap-4">
                         <img src="assets/img/Avatars.png" alt="" class="max-w-[112px] w-full mx-auto">
                         <div class="text-center">
@@ -396,7 +455,7 @@
                 <h2 class="text-cBlack text-5xl font-medium mb-16">Our professionals</h2>
                 <div class="flex md:flex-nowrap flex-wrap gap-6">
                     <!-- professional single card 1 -->
-                    <div class="flex flex-col rounded-[20px] bg-white overflow-hidden shadow-sm">
+                    <div class="flex flex-col rounded-[20px] bg-white overflow-hidden shadow-sm" data-aos="fade-up" data-aos-duration="1000">
                         <img src="assets/img/card1.png" alt="" class="border-b border-[#F5F5F5]">
                         <div class="p-6">
                             <h2 class="text-cBlack text-lg font-semibold not-italic mb-2">John Doe, Blockchain Developer</h2>
@@ -432,7 +491,7 @@
                         </div>
                     </div>
                     <!-- professional single card  2-->
-                    <div class="flex flex-col rounded-[20px] bg-white overflow-hidden shadow-sm">
+                    <div class="flex flex-col rounded-[20px] bg-white overflow-hidden shadow-sm" data-aos="fade-up" data-aos-duration="1200">
                         <img src="assets/img/card2.png" alt="" class="border-b border-[#F5F5F5]">
                         <div class="p-6">
                             <h2 class="text-cBlack text-lg font-semibold not-italic mb-2">John Doe, Blockchain Developer</h2>
@@ -468,7 +527,7 @@
                         </div>
                     </div>
                     <!-- professional single card 3 -->
-                    <div class="flex flex-col rounded-[20px] bg-white overflow-hidden shadow-sm">
+                    <div class="flex flex-col rounded-[20px] bg-white overflow-hidden shadow-sm" data-aos="fade-up" data-aos-duration="1400">
                         <img src="assets/img/card3.png" alt="" class="border-b border-[#F5F5F5]">
                         <div class="p-6">
                             <h2 class="text-cBlack text-lg font-semibold not-italic mb-2">John Doe, Blockchain Developer</h2>
@@ -565,7 +624,7 @@
         <section class="md:py-[120px] py-12 bg-cBlack bg-[url('assets/img/pattern.png')] bg-cover bg-no-repeat"> 
             <div class="container flex md:flex-row flex-col gap-6 items-center">
                 <!-- contact-left part  -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-6" data-aos="fade-right" data-aos-duration="1200">
                     <h2 class="text-white font-medium sm:text-5xl text-4xl not-italic">Our engineers pair with top companies like yours.</h2>
                     <div class="flex sm:flex-row flex-col items-center gap-4 sm:mt-0 mt-4">
                         <a href="#" class="book_btn inline-flex items-center h-12 bg-cYellow px-4 gap-2 py-3 rounded-[100px] cursor-pointer text-base leading-none font-[500] text-cBlack">
@@ -588,7 +647,7 @@
                 </div>
 
                 <!-- contact right part  -->
-                <div class=" max-w-[604px] w-full shadow rounded-[20px] bg-white overflow-hidden">
+                <div class=" max-w-[604px] w-full shadow rounded-[20px] bg-white overflow-hidden" data-aos="fade-left" data-aos-duration="1200">
                     <h2 class="bg-cOrange p-6 text-2xl font-medium text-cBlack not-italic">
                         Send an email, we’ll get back soon
                     </h2>
@@ -637,6 +696,51 @@
     </footer>
     <!--======== Footer Area End =========-->
 
+
+    <!-- js for mobile menu  -->
+
+        <script>
+            // Burger menus
+            document.addEventListener('DOMContentLoaded', function() {
+                // open
+                const burger = document.querySelectorAll('.navbar-burger');
+                const menu = document.querySelectorAll('.navbar-menu');
+
+                if (burger.length && menu.length) {
+                    for (var i = 0; i < burger.length; i++) {
+                        burger[i].addEventListener('click', function() {
+                            for (var j = 0; j < menu.length; j++) {
+                                menu[j].classList.toggle('hidden');
+                            }
+                        });
+                    }
+                }
+
+                // close
+                const close = document.querySelectorAll('.navbar-close');
+                const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+                if (close.length) {
+                    for (var i = 0; i < close.length; i++) {
+                        close[i].addEventListener('click', function() {
+                            for (var j = 0; j < menu.length; j++) {
+                                menu[j].classList.toggle('hidden');
+                            }
+                        });
+                    }
+                }
+
+                if (backdrop.length) {
+                    for (var i = 0; i < backdrop.length; i++) {
+                        backdrop[i].addEventListener('click', function() {
+                            for (var j = 0; j < menu.length; j++) {
+                                menu[j].classList.toggle('hidden');
+                            }
+                        });
+                    }
+                }
+            });
+        </script>
     
 
     <!-- js for accordion  -->
